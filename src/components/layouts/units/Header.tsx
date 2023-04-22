@@ -1,4 +1,4 @@
-import { H1 } from '@src/components/commons/Typography';
+import { H1 } from '@src/components/common/Typography';
 import { HeaderWrap } from './style';
 
 const Header = () => {
