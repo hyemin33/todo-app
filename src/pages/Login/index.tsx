@@ -1,4 +1,5 @@
 import { signIn } from '@src/apis/auth';
+import AuthForm from '@src/components/auth/AuthForm';
 
 const LoginPage = () => {
   const handleSubmit = async () => {
@@ -10,11 +11,7 @@ const LoginPage = () => {
     console.log(res);
   };
 
-  return (
-    <div>
-      로그인<button onClick={handleSubmit}></button>
-    </div>
-  );
+  return <AuthForm mode='login' />;
 };
 
 export default LoginPage;
