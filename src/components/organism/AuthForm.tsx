@@ -1,13 +1,12 @@
-
 import { useState } from 'react';
 import { signIn, signUp } from '@src/apis/auth';
 import auth from '@src/utils/auth';
 import { useNavigate } from 'react-router-dom';
 
-import { FlexCenterBox, FormBox } from '../common/Box';
-import Button from '../common/Button';
-import Input from '../common/Input';
-import { H2 } from '../common/Typography';
+import { FlexCenterBox, FormBox } from '../atoms/Box';
+import Button from '../atoms/Button';
+import Input from '../atoms/Input';
+import { H2 } from '../atoms/Typography';
 
 const AuthForm = ({ mode = '' }: { mode: string }) => {
   const navigate = useNavigate();
@@ -44,7 +43,6 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
       }
     }
   };
-
 
   return (
     <FlexCenterBox>

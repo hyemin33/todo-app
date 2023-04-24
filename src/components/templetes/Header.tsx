@@ -1,5 +1,5 @@
-import { H1 } from '@src/components/common/Typography';
 import styled from '@emotion/styled';
+import { H1 } from '../atoms/Typography';
 
 const Header = () => {
   return (
@@ -10,7 +10,6 @@ const Header = () => {
 };
 
 const HeaderWrap = styled.div`
-
   background: #ebe4f9;
   position: fixed;
   width: 100%;
@@ -20,7 +19,6 @@ const HeaderWrap = styled.div`
   justify-content: center;
   text-align: center;
   box-shadow: 0 -3px 10px 0 rgba(39, 39, 39, 0.2);
-
 `;
 
 export default Header;
