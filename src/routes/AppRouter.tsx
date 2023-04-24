@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import MainPage from '@src/pages/Main';
 import ErrorPage from '@src/pages/Error';
-import DefaultLayout from '@src/components/layouts';
+import DefaultLayout from '@src/components/templetes/ServiceWrapper';
 import LoginPage from '@src/pages/Login';
 
 export const AppRouter = () => {

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import styled from '@emotion/styled';
-import Header from './units/Header';
+import Header from './Header';
 
-const DefaultLayout = () => {
+const ServiceWrapper = () => {
   return (
     <Wrap>
       <Header />
@@ -29,7 +29,6 @@ const Body = styled.div`
   display: flex;
   justify-content: center;
   padding: 140px 0 50px;
-
 `;
 
 const Container = styled.div`
@@ -38,6 +37,5 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 20px;
-
 `;
-export default DefaultLayout;
+export default ServiceWrapper;
