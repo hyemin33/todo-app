@@ -1,4 +1,4 @@
-export type SignRequestProps = {
+export interface ISignProps {
   email: string;
   password: string;
-};
+}

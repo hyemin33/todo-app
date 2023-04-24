@@ -19,17 +19,16 @@ const Btn = styled.button`
   height: 42px;
   border-radius: 4px;
   border: solid 1px #e5e5e8;
-  background: #fff;
+  background: #333;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #333333;
+  color: #fff;
   cursor: pointer;
 
   &:disabled {
     background-color: #c0c0c6;
-    color: #fff;
     border: none;
   }
 `;

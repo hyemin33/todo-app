@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { FlexCenterBox, FormBox } from '../atoms/Box';
 import Button from '../atoms/Button';
-import Input from '../atoms/Input';
+import LabelInput from '../molecules/LabelInput';
 import { H2 } from '../atoms/Typography';
+import useValidation from '@src/utils/hooks/useValidation';
 
 const AuthForm = ({ mode = '' }: { mode: string }) => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
   const pageMode = mode === 'signin' ? '로그인' : '회원가입';
 
   const [user, setUser] = useState({ email: '', password: '' });
+  const [emailError, passwordError] = useValidation(user);
 
   const handleChange =
     (text: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,6 +23,9 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
     };
 
   const handleSubmit = async () => {
+    if (emailError !== '' || passwordError !== '') {
+      return;
+    }
     try {
       if (mode === 'signin') {
         const res = await signIn({
@@ -48,17 +53,19 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
     <FlexCenterBox>
       <FormBox>
         <H2>{pageMode}</H2>
-        <Input
+        <LabelInput
           label='이메일'
           type='text'
           placeholder='이메일을 입력해주세요.'
           onChange={handleChange('email')}
+          error={emailError}
         />
-        <Input
+        <LabelInput
           label='비밀번호'
           type='password'
           placeholder='비밀번호를 입력해주세요.'
           onChange={handleChange('password')}
+          error={passwordError}
         />
         <Button
           text={pageMode}
