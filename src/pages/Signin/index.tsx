@@ -1,7 +1,7 @@
 import AuthForm from '@src/components/organism/AuthForm';
 
-const LoginPage = () => {
+const SigninPage = () => {
   return <AuthForm mode='signin' />;
 };
 
-export default LoginPage;
+export default SigninPage;

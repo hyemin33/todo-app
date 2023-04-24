@@ -3,10 +3,10 @@ import { signIn, signUp } from '@src/apis/auth';
 import auth from '@src/utils/auth';
 import { useNavigate } from 'react-router-dom';
 
-import { FlexCenterBox, FormBox } from '../atoms/Box';
-import Button from '../atoms/Button';
-import LabelInput from '../molecules/LabelInput';
-import { H2 } from '../atoms/Typography';
+import { FlexCenterBox, FormBox } from '@src/components/atoms/Box';
+import Button from '@src/components/atoms/Button';
+import LabelInput from '@src/components/molecules/LabelInput';
+import { H2 } from '@src/components/atoms/Typography';
 import useValidation from '@src/utils/hooks/useValidation';
 
 const AuthForm = ({ mode = '' }: { mode: string }) => {
@@ -40,11 +40,11 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
           email: user.email,
           password: user.password,
         });
-        navigate('/login');
+        navigate('/signin');
       }
     } catch (error) {
       if (error instanceof Error) {
-        return alert(error.message);
+        return alert(error);
       }
     }
   };
