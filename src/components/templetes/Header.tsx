@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { H1 } from '../atoms/Typography';
+import { H1 } from '@src/components/atoms/Typography';
 
 const Header = () => {
   return (
