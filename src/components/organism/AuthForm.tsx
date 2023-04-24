@@ -3,7 +3,7 @@ import { signIn, signUp } from '@src/apis/auth';
 import auth from '@src/utils/auth';
 import { useNavigate } from 'react-router-dom';
 
-import { FlexCenterBox, FormBox } from '@src/components/atoms/Box';
+import { FlexCenterBox, Box } from '@src/components/atoms/Box';
 import Button from '@src/components/atoms/Button';
 import LabelInput from '@src/components/molecules/LabelInput';
 import { H2 } from '@src/components/atoms/Typography';
@@ -51,7 +51,7 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
 
   return (
     <FlexCenterBox>
-      <FormBox>
+      <Box>
         <H2>{pageMode}</H2>
         <LabelInput
           label='이메일'
@@ -72,7 +72,7 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
           disabled={user.email === '' || user.password === ''}
           onClick={handleSubmit}
         />
-      </FormBox>
+      </Box>
     </FlexCenterBox>
   );
 };

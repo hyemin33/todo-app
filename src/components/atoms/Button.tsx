@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 interface IButton {
   text: string;
-  disabled: boolean;
+  disabled?: boolean;
   onClick: (e: React.MouseEvent) => void;
 }
 
