@@ -10,9 +10,15 @@ const Header = () => {
 };
 
 const HeaderWrap = styled.div`
-  border-bottom: 1px solid #efefef;
+  background: #ebe4f9;
+  position: fixed;
   width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  box-shadow: 0 -3px 10px 0 rgba(39, 39, 39, 0.2);
 `;
 
 export default Header;
