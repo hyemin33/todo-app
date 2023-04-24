@@ -1,10 +1,17 @@
 import styled from '@emotion/styled';
 
-const Input = ({ label, isPw = false, ...props }) => {
+interface IInput {
+  label: string;
+  type: string;
+  placeholder: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const Input = ({ label, placeholder, type, ...props }: IInput) => {
   return (
     <InputArea>
       {label && <LabelText>{label}</LabelText>}
-      <StyledInput {...props} type={isPw ? 'password' : 'text'} />
+      <StyledInput placeholder={placeholder} type={type} {...props} />
     </InputArea>
   );
 };
