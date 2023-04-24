@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { signIn, signUp } from '@src/apis/auth';
 import auth from '@src/utils/auth';
@@ -43,6 +44,7 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
       }
     }
   };
+
 
   return (
     <FlexCenterBox>

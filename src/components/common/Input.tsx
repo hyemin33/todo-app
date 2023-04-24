@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+
 interface IInput {
   label: string;
   type: string;
@@ -12,6 +13,7 @@ const Input = ({ label, placeholder, type, ...props }: IInput) => {
     <InputArea>
       {label && <LabelText>{label}</LabelText>}
       <StyledInput placeholder={placeholder} type={type} {...props} />
+
     </InputArea>
   );
 };

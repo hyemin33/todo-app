@@ -29,12 +29,15 @@ const Body = styled.div`
   display: flex;
   justify-content: center;
   padding: 140px 0 50px;
+
 `;
 
 const Container = styled.div`
   max-width: 960px;
+
   width: 100%;
   height: 100%;
   padding: 0 20px;
+
 `;
 export default DefaultLayout;
