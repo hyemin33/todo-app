@@ -71,7 +71,9 @@ const TodoItem = ({ item, refetch }: ITodoList) => {
               checked={changeTodo.isCompleted}
               onChange={handleComplete}
             />
-            <TodoText>{item.todo}</TodoText>
+            <TodoText className={changeTodo.isCompleted ? 'line' : ''}>
+              {item.todo}
+            </TodoText>
           </TodoTextArea>
           <ButtonArea>
             <Button
@@ -108,6 +110,10 @@ const TodoText = styled.p`
   font-size: 14px;
   padding: 12px 5px 10px;
   width: 100%;
+
+  &.line {
+    text-decoration: line-through;
+  }
 `;
 
 const TodoItemArea = styled.li`
