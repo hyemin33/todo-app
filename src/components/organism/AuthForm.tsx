@@ -40,6 +40,7 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
         auth.setToken(res.data.access_token);
         if (auth.getToken()) {
           navigate('/todo');
+          window.location.reload();
         }
       } else {
         await signUp({
