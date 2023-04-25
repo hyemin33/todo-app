@@ -3,7 +3,8 @@ h1,
 h2,
 h3,
 p,
-div {
+div,
+input {
   margin: 0;
   box-sizing: border-box;
   line-height: 1.5;
