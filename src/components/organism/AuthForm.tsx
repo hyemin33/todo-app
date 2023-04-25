@@ -39,7 +39,9 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
         });
 
         auth.setToken(res.data.access_token);
-        navigate('/todo');
+        if (auth.getToken()) {
+          navigate('/todo');
+        }
       } else {
         await signUp({
           email: user.email,
