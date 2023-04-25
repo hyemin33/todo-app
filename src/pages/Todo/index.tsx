@@ -1,16 +1,26 @@
 import styled from '@emotion/styled';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { createTodo, getTodos } from '@src/apis/todo';
 
 import { Box, EmptyBox, FlexCenterBox } from '@src/components/atoms/Box';
 import { H2 } from '@src/components/atoms/Typography';
 import InputButton from '@src/components/molecules/InputButton';
 import TodoItem from '@src/components/organism/TodoItem';
+import auth from '@src/utils/auth';
 import useGetData from '@src/utils/hooks/useGetData';
-import { useState } from 'react';
 
 const TodoPage = () => {
   const [todo, setTodo] = useState('');
   const { data, refetch } = useGetData(getTodos);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!auth.getToken()) {
+      navigate('/signin');
+    }
+  }, []);
 
   const handleCreate = async () => {
     if (todo === '') return alert('TODO를 입력해주세요.');

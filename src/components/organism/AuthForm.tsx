@@ -3,7 +3,6 @@ import { signIn, signUp } from '@src/apis/auth';
 import auth from '@src/utils/auth';
 import { useNavigate } from 'react-router-dom';
 
-
 import { FlexCenterBox, Box } from '@src/components/atoms/Box';
 
 import Button from '@src/components/atoms/Button';
@@ -25,8 +24,11 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
     };
 
   const handleSubmit = async () => {
-    if (emailError !== '' || passwordError !== '') {
-      return;
+    if (emailError !== '') {
+      return alert(emailError);
+    }
+    if (passwordError !== '') {
+      return alert(passwordError);
     }
     try {
       if (mode === 'signin') {
@@ -60,14 +62,12 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
           type='text'
           placeholder='이메일을 입력해주세요.'
           onChange={handleChange('email')}
-          error={emailError}
         />
         <LabelInput
           label='비밀번호'
           type='password'
           placeholder='비밀번호를 입력해주세요.'
           onChange={handleChange('password')}
-          error={passwordError}
         />
         <Button
           text={pageMode}
