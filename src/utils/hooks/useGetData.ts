@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-const useGetData = (api, { onSuccess } = {}) => {
+const useGetData = (api: any, { onSuccess }: any = {}) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -12,7 +12,6 @@ const useGetData = (api, { onSuccess } = {}) => {
         setIsLoading(false);
         setData(res.data);
         if (onSuccess) onSuccess(res.data);
-
       });
     } catch (error) {
       alert(error);
