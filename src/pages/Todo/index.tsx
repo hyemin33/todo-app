@@ -12,7 +12,7 @@ import useGetData from '@src/utils/hooks/useGetData';
 
 const TodoPage = () => {
   const [todo, setTodo] = useState('');
-  const { data, refetch } = useGetData(getTodos);
+  const { data, refetch, isLoading } = useGetData(getTodos);
 
   const navigate = useNavigate();
 
@@ -42,15 +42,17 @@ const TodoPage = () => {
           text='등록'
           width={100}
         />
-        <TodoList>
-          {data.length > 0 ? (
-            data.map((item, i) => (
-              <TodoItem item={item} key={`todo` + i} refetch={refetch} />
-            ))
-          ) : (
-            <EmptyBox>TODO가 없습니다.</EmptyBox>
-          )}
-        </TodoList>
+        {!isLoading && (
+          <TodoList>
+            {data.length > 0 ? (
+              data.map((item, i) => (
+                <TodoItem item={item} key={`todo` + i} refetch={refetch} />
+              ))
+            ) : (
+              <EmptyBox>TODO가 없습니다.</EmptyBox>
+            )}
+          </TodoList>
+        )}
       </Box>
     </FlexCenterBox>
   );

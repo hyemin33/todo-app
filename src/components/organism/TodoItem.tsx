@@ -106,7 +106,7 @@ const CheckBox = styled.input`
 `;
 const TodoText = styled.p`
   font-size: 14px;
-  padding: 10px 5px 9px;
+  padding: 12px 5px 10px;
   width: 100%;
 `;
 

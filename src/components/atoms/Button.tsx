@@ -18,7 +18,7 @@ const Button = ({ disabled, width, text, onClick, ...props }: IButton) => {
 
 const Btn = styled.button<{ width?: number }>`
   width: ${(props) => (props.width ? props.width + 'px' : '100%')};
-  height: 40px;
+  height: 42px;
   border-radius: 4px;
   border: solid 1px #333;
   background: #333;
