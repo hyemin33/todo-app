@@ -1,6 +1,7 @@
 interface IAuth {
   setToken(token: string): void;
   getToken(): any;
+  clearAppStorage(): any;
 }
 
 const auth: IAuth = {
@@ -9,6 +10,9 @@ const auth: IAuth = {
   },
   getToken() {
     return localStorage.getItem('token');
+  },
+  clearAppStorage() {
+    return localStorage.clear();
   },
 };
 export default auth;
