@@ -7,10 +7,12 @@ const useGetData = (api, { onSuccess } = {}) => {
   const getData = useCallback(async () => {
     try {
       setIsLoading(true);
-      await api().then((get) => {
+
+      await api().then((res: any) => {
         setIsLoading(false);
-        setData(get.data);
-        if (onSuccess !== undefined) onSuccess(get.data);
+        setData(res.data);
+        if (onSuccess) onSuccess(res.data);
+
       });
     } catch (error) {
       alert(error);
