@@ -10,7 +10,7 @@ const useValidation = (user: ISignProps) => {
       ? setEmailError('')
       : setEmailError('이메일을 다시 입력해주세요.');
 
-    user.password.length > 8
+    user.password.length >= 8
       ? setPasswordError('')
       : setPasswordError('비밀번호는 8자리 이상 입력해주세요.');
   }, [user]);

@@ -17,16 +17,10 @@ const LabelInput = ({
     <InputArea>
       {label && <LabelText>{label}</LabelText>}
       <Input placeholder={placeholder} type={type} {...props} />
-      {error && <ErrorText>{error}</ErrorText>}
     </InputArea>
   );
 };
 
-const ErrorText = styled.span`
-  color: #d10a0a;
-  font-size: 14px;
-  margin-top: 5px;
-`;
 const LabelText = styled.label`
   font-size: 14px;
   font-weight: bold;
