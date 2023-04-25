@@ -9,6 +9,7 @@ import Button from '@src/components/atoms/Button';
 import LabelInput from '@src/components/molecules/LabelInput';
 import { H2 } from '@src/components/atoms/Typography';
 import useValidation from '@src/utils/hooks/useValidation';
+import { AxiosError } from 'axios';
 
 const AuthForm = ({ mode = '' }: { mode: string }) => {
   const navigate = useNavigate();
@@ -47,8 +48,8 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
         navigate('/signin');
       }
     } catch (error) {
-      if (error instanceof Error) {
-        return alert(error.response.data.message);
+      if (error instanceof AxiosError) {
+        return alert(error.response?.data.message);
       }
     }
   };
