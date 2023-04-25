@@ -15,3 +15,11 @@ export const FlexCenterBox = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const EmptyBox = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
