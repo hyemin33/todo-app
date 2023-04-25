@@ -5,6 +5,7 @@ import ErrorPage from '@src/pages/Error';
 import DefaultLayout from '@src/components/templetes/ServiceWrapper';
 import SigninPage from '@src/pages/Signin';
 import SignupPage from '@src/pages/Signup';
+import TodoPage from '@src/pages/Todo';
 
 export const AppRouter = () => {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ export const AppRouter = () => {
         {
           path: '/signup',
           element: <SignupPage />,
+        },
+        {
+          path: '/todo',
+          element: <TodoPage />,
         },
       ],
     },
