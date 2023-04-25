@@ -48,7 +48,7 @@ const AuthForm = ({ mode = '' }: { mode: string }) => {
       }
     } catch (error) {
       if (error instanceof Error) {
-        return alert(error);
+        return alert(error.response.data.message);
       }
     }
   };
