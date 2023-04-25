@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
+import { useNavigate } from 'react-router-dom';
 
 import { H1 } from '@src/components/atoms/Typography';
-import Button from '../atoms/Button';
+import Button from '@src/components/atoms/Button';
 import auth from '@src/utils/auth';
-import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();

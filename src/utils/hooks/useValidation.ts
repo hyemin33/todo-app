@@ -1,5 +1,6 @@
-import { ISignProps } from '@src/types/auth.type';
 import { useEffect, useState } from 'react';
+
+import { ISignProps } from '@src/types/auth.type';
 
 const useValidation = (user: ISignProps) => {
   const [emailError, setEmailError] = useState('');

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import Button from '../atoms/Button';
-import Input, { IInput } from '../atoms/Input';
+import Button from '@src/components/atoms/Button';
+import Input, { IInput } from '@src/components/atoms/Input';
 
 interface IInputButton extends IInput {
   text: string;

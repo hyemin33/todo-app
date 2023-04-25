@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
+import { useNavigate } from 'react-router-dom';
 
 import { FlexCenterBox, Box } from '@src/components/atoms/Box';
 import Button from '@src/components/atoms/Button';
-import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
   const navigate = useNavigate();

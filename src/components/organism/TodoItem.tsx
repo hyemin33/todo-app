@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { useState } from 'react';
 
-import Input from '../atoms/Input';
-import Button from '../atoms/Button';
+import Input from '@src/components/atoms/Input';
+import Button from '@src/components/atoms/Button';
 import { deleteTodo, updateTodo } from '@src/apis/todo';
+
 import { ITodo } from '@src/types/todo.type';
 
 interface ITodoList {
@@ -44,10 +45,8 @@ const TodoItem = ({ item, refetch }: ITodoList) => {
           <TodoTextArea>
             <Input
               value={changeTodo.todo}
-
               placeholder='TODO를 입력해주세요.'
               type='string'
-
               onChange={(e) => {
                 setChangeTodo({ ...changeTodo, todo: e.target.value });
               }}

@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import styled from '@emotion/styled';
-import Header from './Header';
+import Header from '@src/components/templetes/Header';
 
 const ServiceWrapper = () => {
   return (
