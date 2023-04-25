@@ -44,8 +44,10 @@ const TodoItem = ({ item, refetch }: ITodoList) => {
           <TodoTextArea>
             <Input
               value={changeTodo.todo}
+
               placeholder='TODO를 입력해주세요.'
               type='string'
+
               onChange={(e) => {
                 setChangeTodo({ ...changeTodo, todo: e.target.value });
               }}
